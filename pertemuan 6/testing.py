@@ -201,7 +201,44 @@ papan_catur(5)
 
 
 
+# def petualangan_hutan():
+#     stamina = 10  # Stamina awal
+#     langkah = 0  # Langkah awal
+#     tujuan = 10  # Target langkah
 
+#     print("Selamat datang di Hutan Terlarang!")
+#     print(f"Stamina awal: {stamina}\n")
+
+#     while langkah < tujuan and stamina > 0:
+#         print(f"Langkah ke-{langkah + 1}:")
+#         print("1. Jalan (kurangi stamina)")
+#         print("2. Makan buah (tambah stamina)")
+        
+#         pilihan = input("Pilihan: ")
+
+#         if pilihan == "1":
+#             stamina -= 2  # Berjalan mengurangi stamina
+#             langkah += 1
+#         elif pilihan == "2":
+#             stamina += 5  # Makan buah menambah stamina
+#         else:
+#             print("Pilihan tidak valid, coba lagi.")
+#             continue  # Kembali ke awal loop tanpa menghitung langkah
+        
+#         if stamina <= 0:
+#             print("\nPetualang kelelahan dan tidak bisa melanjutkan perjalanan.")
+#             break
+        
+#         print(f"Stamina tersisa: {stamina}\n")
+
+#     if langkah >= tujuan:
+#         print(f"\nPetualang berhasil mencapai akhir perjalanan dengan stamina {stamina}!")
+#     else:
+#         print("\nPetualangan berakhir di tengah jalan.")
+
+
+# # Memanggil fungsi petualangan_hutan()
+# petualangan_hutan()
 
 
 
