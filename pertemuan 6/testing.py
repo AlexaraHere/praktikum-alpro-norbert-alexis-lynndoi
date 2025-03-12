@@ -243,3 +243,105 @@ papan_catur(5)
 
 
 
+# import random
+
+# def pertarungan_monster():
+#     darah_pemain = 100  # HP Pemain
+#     darah_monster = 80  # HP Monster
+#     jumlah_bertahan = 3  # Batas bertahan
+
+#     print("🔥 Petualangan Dimulai! Anda bertemu monster! 🔥")
+#     print(f"❤ Darah Anda: {darah_pemain} | 👹 Darah Monster: {darah_monster}\n")
+
+#     while darah_pemain > 0 and darah_monster > 0:
+#         print("1. Serang (Mengurangi darah monster)")
+#         print(f"2. Bertahan (Kurangi serangan & pulihkan HP) - Sisa {jumlah_bertahan} kali")
+#         pilihan = input("Pilihan Anda: ")
+
+#         if pilihan == "1":
+#             # Serangan pemain (damage acak antara 15-25)
+#             damage_pemain = random.randint(15, 25)
+#             darah_monster -= damage_pemain
+#             print(f"⚔ Anda menyerang monster! Monster kehilangan {damage_pemain} HP.")
+#         elif pilihan == "2":
+#             if jumlah_bertahan > 0:
+#                 # Mengurangi serangan monster dan memulihkan HP pemain
+#                 jumlah_bertahan -= 1
+#                 heal = random.randint(5, 15)  # Pemain menyembuhkan diri
+#                 darah_pemain += heal
+#                 print(f"🛡 Anda bertahan! Serangan monster berkurang setengah.")
+#                 print(f"✨ Anda juga menyembuhkan diri sebesar {heal} HP!")
+#             else:
+#                 print("⚠ Anda sudah tidak bisa bertahan lagi! Pilih aksi lain.")
+#                 continue
+#         else:
+#             print("❌ Pilihan tidak valid, coba lagi.")
+#             continue
+
+#         if darah_monster <= 0:
+#             print("\n🎉 Anda mengalahkan monster! 🎉")
+#             break
+
+#         # Monster menyerang balik
+#         damage_monster = random.randint(10, 20)
+
+#         # Jika pemain bertahan, serangan monster berkurang 50%
+#         if pilihan == "2":
+#             damage_monster //= 2  
+
+#         darah_pemain -= damage_monster
+#         print(f"👹 Monster menyerang Anda! Anda kehilangan {damage_monster} HP.")
+
+#         if darah_pemain <= 0:
+#             print("\n💀 Anda dikalahkan oleh monster! Petualangan berakhir... 💀")
+#             break
+
+#         print(f"\n❤ Darah Anda: {darah_pemain} | 👹 Darah Monster: {darah_monster}\n")
+
+# # Memulai pertarungan
+# pertarungan_monster()
+
+# import random
+
+# def petualangan_gua():
+#     stamina = 15  # Stamina awal
+#     langkah = 0  # Langkah awal
+#     tujuan = 15  # Target langkah
+
+#     print("🏔 Selamat datang di Gua Misterius!")
+#     print(f"Stamina awal: {stamina}\n")
+
+#     while langkah < tujuan and stamina > 0:
+#         print(f"Langkah ke-{langkah + 1}:")
+#         print("1. Jalan (kurangi stamina)")
+#         print("2. Minum air suci (tambahkan stamina)")
+        
+#         pilihan = input("Pilihan: ")
+
+#         if pilihan == "1":
+#             stamina -= 3  # Berjalan mengurangi stamina
+#             langkah += 1
+
+#             # 30% kemungkinan menemukan air suci secara otomatis
+#             if random.random() < 0.3:
+#                 print("✨ Anda menemukan air suci dan meminumnya! (+7 stamina)")
+#                 stamina += 7
+#         elif pilihan == "2":
+#             stamina += 7  # Minum air suci menambah stamina
+#         else:
+#             print("Pilihan tidak valid, coba lagi.")
+#             continue  # Kembali ke awal loop tanpa menghitung langkah
+        
+#         if stamina <= 0:
+#             print("\n💀 Petualang kelelahan dan tidak bisa melanjutkan perjalanan.")
+#             break
+        
+#         print(f"Stamina tersisa: {stamina}\n")
+
+#     if langkah >= tujuan:
+#         print("\n🎉 Petualang berhasil menemukan harta karun dengan stamina", stamina, "!")
+#     else:
+#         print("\n🏴‍☠ Petualangan berakhir di tengah jalan.")
+
+# # Memanggil fungsi untuk memulai game
+# petualangan_gua()
