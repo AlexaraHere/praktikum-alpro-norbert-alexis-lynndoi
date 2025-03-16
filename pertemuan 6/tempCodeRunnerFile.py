@@ -1,2 +1,2 @@
-print("Papan Catur:")
-papan_catur(n)
+    if total_sks == 0:
+        return 0

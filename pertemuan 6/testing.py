@@ -12,23 +12,23 @@
 
 
 
-# def perkalian(angkaAwal, angkaKedua):
-#     hasil = angkaAwal//angkaKedua
-#     i = 0
-#     print(f"{angkaAwal} * {angkaKedua} ",end=" = ")
-#     if angkaAwal == 0 or angkaKedua == 0:
-#         hasil = angkaAwal*angkaKedua
-#         hasil = 0 
-#         print(f" {hasil} ")
-#     else:
-#         hasil = angkaAwal*angkaKedua
-#         for i in range (angkaAwal):
-#             print(angkaKedua, end="")
-#             if i < angkaAwal - 1:
-#                 print(" + ", end="")
-#         print(f" = {hasil} ")
-#         i += 1
-# perkalian(3,1)
+def perkalian(angkaAwal, angkaKedua):
+    hasil = angkaAwal//angkaKedua
+    i = 0
+    print(f"{angkaAwal} * {angkaKedua} ",end=" = ")
+    if angkaAwal == 0 or angkaKedua == 0:
+        hasil = angkaAwal*angkaKedua
+        hasil = 0 
+        print(f" {hasil} ")
+    else:
+        hasil = angkaAwal*angkaKedua
+        for i in range (angkaAwal):
+            print(angkaKedua, end="")
+            if i < angkaAwal - 1:
+                print(" + ", end="")
+        print(f" = {hasil} ")
+        i += 1
+perkalian(3,1)
 
 # attributes = ['Electric', 'Fast']
 # cars = ['Tesla', 'Porsche', 'Mercedes']
@@ -39,22 +39,80 @@
 #     print("-----")
 
 
-# def perkalian(angkaAwal, angkaKedua):
-#     hasil = angkaAwal*angkaKedua
-#     i = 0
-#     print(f"{angkaAwal} * {angkaKedua} ",end=" = ")
-#     if angkaAwal == 0 or angkaKedua == 0:
-#         hasil = angkaAwal*angkaKedua
-#         hasil = 0 
-#         print(f" {hasil} ")
-#     else:
-#         hasil = angkaAwal*angkaKedua
-#         while i < angkaAwal:
-#             print(angkaKedua, end="")
-#             if i < angkaAwal - 1:
-#                 print(" + ", end="")
-#             i += 1
-#         print(f" = {hasil} ")
+def perkalian(angkaAwal, angkaKedua):
+    hasil = angkaAwal*angkaKedua
+    i = 0
+    print(f"{angkaAwal} * {angkaKedua} ",end=" = ")
+    if angkaAwal == 0 or angkaKedua == 0:
+        hasil = angkaAwal*angkaKedua
+        hasil = 0 
+        print(f" {hasil}.")
+    else:
+        hasil = angkaAwal*angkaKedua
+        while i < angkaAwal:
+            print(angkaKedua, end="")
+            if i < angkaAwal - 1:
+                print(" + ", end="")
+            i += 1
+        print(f" = {hasil}.")
+perkalian(5, 5)
+
+# def ganjil(batasBawah,batasAtas):
+#     if batasBawah < batasAtas:
+#         for i in range(batasBawah, batasAtas + 1):
+#             if i %2 != 0:
+#                 print(i, end="")
+#                 if i < batasAtas - 1:
+#                     print(end=", ")
+#         print(".")
+#     elif batasBawah > batasAtas:            
+#         for i in range(batasBawah,batasAtas-1 , -1):
+#             if i % 2 !=0: 
+#                 print(i, end="")
+#                 if i < batasAtas + 1:
+#                     print(end=", ")
+#         print(". ")
+# bb1 = int(input("angka 1 "))
+# bb2 = int(input("angka 2 "))
+# ganjil(bb1,bb2)
+
+# def ganjil(batasBawah,batasAtas):
+#     if batasBawah < batasAtas:
+#         for k in range(batasBawah, batasAtas + 1):
+#             if k %2 != 0:
+#                 print (k,end="")
+#                 if k < batasAtas - 1:
+#                     print(end=", ")
+ 
+#     else: 
+#         for k in range(batasBawah,batasAtas-1 , -1):
+#             if k % 2 !=0:
+#                 print(k,end="")
+#                 if k > batasAtas + 1:
+#                     print(end=", ")
+#     print(".") 
+# # Input angka
+# bb1 = int(input("Masukkan angka 1: "))
+# bb2 = int(input("Masukkan angka 2: "))
+# ganjil(bb1, bb2)
+
+
+def jumlah_mk(sks):
+    total_harga = 0
+
+    for i in range(1, jumlah_barang + 1):
+        harga = int(input(f"{i}: "))
+        total_harga += harga
+    return total_harga
+
+# Input jumlah barang
+jumlah_barang = int(input("Masukkan jumlah barang: "))
+
+# Hitung total harga menggunakan fungsi
+total_harga = jumlah_mk(jumlah_barang)
+
+# Tampilkan hasil
+print(f"Total harga belanjaan: {total_harga}")
 
 # def tabel_perkalian(n):
 #     for i in range(1, n+1):
@@ -83,27 +141,27 @@
 #             print("*", end="")
 #         print()
 
-def papan_catur(n):
-    for i in range(n):
-        for j in range(n):
-            if (i + j) % 2 == 0:
-                print("#", end=" ")
-            else:
-                print(" ", end=" ")
-        print()
+# def papan_catur(n):
+#     for i in range(n):
+#         for j in range(n):
+#             if (i + j) % 2 == 0:
+#                 print("#", end=" ")
+#             else:
+#                 print(" ", end=" ")
+#         print()
 
-# n = int(input("ya "))
-# print("Piramida Angka:")
-# piramida_angka(n)
+# # n = int(input("ya "))
+# # print("Piramida Angka:")
+# # piramida_angka(n)
 
-# print("Kotak Berbingkai:")
-# kotak_berbingkai(n)
+# # print("Kotak Berbingkai:")
+# # kotak_berbingkai(n)
 
-# print("Segitiga Terbalik:")
-# segitiga_terbalik(n)
+# # print("Segitiga Terbalik:")
+# # segitiga_terbalik(n)
 
-print("Papan Catur:")
-papan_catur(5)
+# print("Papan Catur:")
+# papan_catur(5)
 
 # aaaaa = int(input("masukin angka perkalian 1 "))
 # bbbbb = int(input("masukin angka perkalian 2 "))   
@@ -345,3 +403,47 @@ papan_catur(5)
 
 # # Memanggil fungsi untuk memulai game
 # petualangan_gua()
+
+
+
+
+
+
+
+
+
+
+def deret_gws(jumlah_bilangan, kelipatan, angka_gws1, angka_gws2, kata_gws1, kata_gws2, kata_spesial):
+    a = 0
+    if jumlah_bilangan == int() or kelipatan == int() or angka_gws1 == int() or angka_gws2 ==int() or kata_gws1 ==str() or kata_gws2 ==str() or kata_spesial =str():
+        print("TIDAK VALID")
+    elif jumlah_bilangan != int() or kelipatan != int() or angka_gws1 != int() or angka_gws2 !=int() or kata_gws1 !=str() or kata_gws2 !=str() or kata_spesial !=str():
+        for i in range(1, jumlah_bilangan + 1):
+            oke = kelipatan * i
+            if oke % angka_gws1 == 0 and oke % angka_gws2 == 0:
+                print(kata_spesial, end=" ")
+            elif oke % angka_gws1 == 0:
+                print(kata_gws1, end =" ")
+            elif oke % angka_gws2 == 0:
+                print(kata_gws2, end=" ")
+            else:
+                print(oke, end=" ")
+
+
+def deret_gws(jumlah_bilangan, kelipatan, angka_gws1, angka_gws2, kata_gws1, kata_gws2, kata_gws_spesial):
+    try:
+        if jumlah_bilangan > 0 and kelipatan > 0 and angka_gws1 <= jumlah_bilangan and angka_gws2 <= jumlah_bilangan:
+            for i in range(1,jumlah_bilangan +1):
+                if i*kelipatan % angka_gws1 == 0 and i*kelipatan % angka_gws2 == 0:
+                    print(kata_gws_spesial, end=" ")
+                elif i*kelipatan % angka_gws1 == 0:
+                    print(kata_gws1, end=" ")
+                elif i*kelipatan % angka_gws2 ==0:
+                    print(kata_gws2, end=" ")
+                else:
+                    print(i*kelipatan, end=" ")
+        else:
+            print("TIDAK VALID")
+    except TypeError:
+        print("TIDAK VALID")
+    return 0    
