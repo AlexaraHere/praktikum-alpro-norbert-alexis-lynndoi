@@ -1,0 +1,6 @@
+handle = open('output.txt', 'r')
+hasil = handle.read()
+print(hasil)
+hasil = str(hasil)
+print(f"Ukuran: {len(hasil)} bytes")
+print("10 huruf belakang: " + hasil[-10:])
