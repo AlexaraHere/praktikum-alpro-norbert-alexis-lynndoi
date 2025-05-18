@@ -1,0 +1,50 @@
+# def keyanditem(angka):
+#     print("key  value   item")
+#     for key, value in angka.items():
+#         print(f"{key}    {value}      {key}")
+
+# keyanditem({1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60})
+
+
+# def satu_dict(list1, list2):
+#     a = (dict(zip(list1, list2)))
+#     print(a)
+
+# satu_dict(['red', 'green', 'blue'], ['#FF0000','#008000', '#0000FF'])
+
+
+# def hitung_pengirim(file):
+#     with open(file, 'r') as f:
+#         baris = f.readlines()
+#     pengirim = {}
+#     for i in baris:
+#         if i.startswith("From "):
+#             potong = i.split()
+#             if len(potong) > 1:
+#                 email = potong[1]
+#                 pengirim[email] = pengirim.get(email, 0) + 1
+#     print(pengirim)
+
+# hitung_pengirim("mbox-short.txt")
+
+
+
+def domain():
+    try:
+        file = input("nama file: ")
+        Opfile = open(file, 'r')
+        domain2 = {}
+        
+        for baris in Opfile:
+            if baris.startswith("From "):
+                kata = baris.split()
+                if len(kata) >= 2:
+                    pengirim = kata[1]
+                    domain = pengirim.split('@')[-1]
+                    domain2[domain] = domain2.get(domain, 0) + 1
+        return domain2
+    except FileNotFoundError:
+        return "ga ada file!"
+
+data = domain()
+print(data)
