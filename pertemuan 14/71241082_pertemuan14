@@ -1,0 +1,56 @@
+#soal 1
+def prima(a, pembagi=2): 
+    if a % pembagi == 0:
+        return "bukan prima"
+    elif a == 1:
+        return "bukan prima"
+    elif pembagi * pembagi > a: 
+        return "prima" 
+    else:
+        return prima(a,pembagi + 1)
+    
+print(prima(5))
+print(prima(4))
+
+#soal 2
+def palindrom(a):
+    a = a.replace(" ", "").lower()
+    if len(a) <= 1:
+        return "palindrom"
+    if a[0] != a[-1]:
+        return "bukan palindrom"
+    else:
+        return palindrom(a[1:-1])
+
+print(palindrom("kasur rusak"))
+print(palindrom("mau tidur"))
+
+#soal 3
+def deret(a):
+    if a == 1: 
+        return 1 
+    else:
+        return 2 * a - 1 + deret(a-1)
+print(deret(2)) 
+print(deret(9)) 
+
+#soal 4
+def digit(a):
+    if a == 0:
+        return 0
+    else:
+        return a % 10 + digit(a // 10)
+
+print(digit(12))
+print(digit(23))
+
+#soal 5
+def kombinasi(a, b):
+    if b == 0 or b == a:
+        return 1
+    else:
+        return kombinasi(a-1, b-1) + kombinasi(a-1, b)
+
+print(kombinasi(2,1))
+print(kombinasi(4,2))
+

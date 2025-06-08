@@ -1,0 +1,13 @@
+def prima(a): 
+    pembagi=2
+    if a % pembagi == 0:
+        return "bukan prima"
+    elif a == 1:
+        return "bukan prima"
+    elif pembagi * pembagi > a: 
+        return "prima" 
+    else:
+        return prima(a)
+    
+print(prima(4))
+print(prima(3))
